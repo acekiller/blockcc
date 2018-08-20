@@ -14,6 +14,7 @@
 		9A03C71D212B7E4500AA4F52 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A03C71B212B7E4500AA4F52 /* LaunchScreen.storyboard */; };
 		9A03C720212B7E4500AA4F52 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A03C71F212B7E4500AA4F52 /* main.m */; };
 		9A03C72A212B7E4500AA4F52 /* blockccTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A03C729212B7E4500AA4F52 /* blockccTests.m */; };
+		9A03C737212B834900AA4F52 /* BCApiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A03C736212B834900AA4F52 /* BCApiManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		9A03C725212B7E4500AA4F52 /* blockccTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = blockccTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A03C729212B7E4500AA4F52 /* blockccTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = blockccTests.m; sourceTree = "<group>"; };
 		9A03C72B212B7E4500AA4F52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9A03C735212B834900AA4F52 /* BCApiManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BCApiManager.h; sourceTree = "<group>"; };
+		9A03C736212B834900AA4F52 /* BCApiManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BCApiManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +84,7 @@
 		9A03C70F212B7E4500AA4F52 /* blockcc */ = {
 			isa = PBXGroup;
 			children = (
+				9A03C734212B7F2D00AA4F52 /* BlockChain */,
 				9A03C710212B7E4500AA4F52 /* AppDelegate.h */,
 				9A03C711212B7E4500AA4F52 /* AppDelegate.m */,
 				9A03C713212B7E4500AA4F52 /* ViewController.h */,
@@ -101,6 +105,15 @@
 				9A03C72B212B7E4500AA4F52 /* Info.plist */,
 			);
 			path = blockccTests;
+			sourceTree = "<group>";
+		};
+		9A03C734212B7F2D00AA4F52 /* BlockChain */ = {
+			isa = PBXGroup;
+			children = (
+				9A03C735212B834900AA4F52 /* BCApiManager.h */,
+				9A03C736212B834900AA4F52 /* BCApiManager.m */,
+			);
+			path = BlockChain;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -206,6 +219,7 @@
 				9A03C715212B7E4500AA4F52 /* ViewController.m in Sources */,
 				9A03C720212B7E4500AA4F52 /* main.m in Sources */,
 				9A03C712212B7E4500AA4F52 /* AppDelegate.m in Sources */,
+				9A03C737212B834900AA4F52 /* BCApiManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
