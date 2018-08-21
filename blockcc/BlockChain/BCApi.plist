@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>ip</key>
+	<string>ip</string>
+	<key>ip_ip_address</key>
+	<string>ip/{ip_address}</string>
+	<key>exrate</key>
+	<string>exrate</string>
+	<key>tx_txhash</key>
+	<string>tx/{txhash}</string>
+	<key>address_address</key>
+	<string>address/{address}</string>
+	<key>markets</key>
+	<string>markets</string>
+	<key>symbols</key>
+	<string>symbols</string>
+	<key>market_pairs</key>
+	<string>market_pairs</string>
+	<key>market_market</key>
+	<string>market/{market}</string>
+	<key>ticker</key>
+	<string>ticker</string>
+	<key>tickers</key>
+	<string>tickers</string>
+	<key>depth</key>
+	<string>kline</string>
+	<key>price</key>
+	<string>price</string>
+	<key>price_history</key>
+	<string>price/history</string>
+	<key>new_pairs</key>
+	<string>new_pairs</string>
+</dict>
+</plist>

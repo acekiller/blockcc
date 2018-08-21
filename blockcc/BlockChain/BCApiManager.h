@@ -7,10 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <ReactiveObjC/ReactiveObjC.h>
+#import "BCApi.h"
 
 @interface BCApiManager : NSObject
 
+@property (nonatomic, strong, readonly) BCHTTPManager *httpManager;
+
 + (instancetype) blockcc;
 - (instancetype)init NS_UNAVAILABLE;
+
+- (RACSignal *) getDataWithApi:(NSString *)api;
 
 @end

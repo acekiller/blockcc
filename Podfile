@@ -5,6 +5,7 @@ target 'blockcc' do
   # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
   use_frameworks!
   pod 'AFNetworking', '~> 3.0'
+  pod 'ReactiveObjC', '3.1.0'
 
   # Pods for blockcc
 
