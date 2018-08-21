@@ -16,6 +16,7 @@
 		9A03C720212B7E4500AA4F52 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A03C71F212B7E4500AA4F52 /* main.m */; };
 		9A03C72A212B7E4500AA4F52 /* blockccTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A03C729212B7E4500AA4F52 /* blockccTests.m */; };
 		9A03C737212B834900AA4F52 /* BCApiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A03C736212B834900AA4F52 /* BCApiManager.m */; };
+		9A50F92B212C39C80073952C /* BCHTTPManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A50F92A212C39C80073952C /* BCHTTPManager.m */; };
 		CB343D2E825C0864A1983D90 /* Pods_blockcc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EF5B514D790F1D1ADC7446A /* Pods_blockcc.framework */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +50,8 @@
 		9A03C72B212B7E4500AA4F52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9A03C735212B834900AA4F52 /* BCApiManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BCApiManager.h; sourceTree = "<group>"; };
 		9A03C736212B834900AA4F52 /* BCApiManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BCApiManager.m; sourceTree = "<group>"; };
+		9A50F929212C39C80073952C /* BCHTTPManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BCHTTPManager.h; sourceTree = "<group>"; };
+		9A50F92A212C39C80073952C /* BCHTTPManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BCHTTPManager.m; sourceTree = "<group>"; };
 		AA1F4345F3A67C25489A3847 /* Pods-blockccTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-blockccTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-blockccTests/Pods-blockccTests.release.xcconfig"; sourceTree = "<group>"; };
 		DFF029C596CFCFF9505332FD /* Pods_blockccTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_blockccTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -135,6 +138,8 @@
 			children = (
 				9A03C735212B834900AA4F52 /* BCApiManager.h */,
 				9A03C736212B834900AA4F52 /* BCApiManager.m */,
+				9A50F929212C39C80073952C /* BCHTTPManager.h */,
+				9A50F92A212C39C80073952C /* BCHTTPManager.m */,
 			);
 			path = BlockChain;
 			sourceTree = "<group>";
@@ -311,6 +316,7 @@
 				9A03C715212B7E4500AA4F52 /* ViewController.m in Sources */,
 				9A03C720212B7E4500AA4F52 /* main.m in Sources */,
 				9A03C712212B7E4500AA4F52 /* AppDelegate.m in Sources */,
+				9A50F92B212C39C80073952C /* BCHTTPManager.m in Sources */,
 				9A03C737212B834900AA4F52 /* BCApiManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -471,7 +477,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K3TT7F7PS3;
 				INFOPLIST_FILE = blockcc/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.goappbox.blockcc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -486,7 +495,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K3TT7F7PS3;
 				INFOPLIST_FILE = blockcc/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.goappbox.blockcc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -501,7 +513,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K3TT7F7PS3;
 				INFOPLIST_FILE = blockccTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.goappbox.blockccTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -517,7 +533,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K3TT7F7PS3;
 				INFOPLIST_FILE = blockccTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.goappbox.blockccTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";

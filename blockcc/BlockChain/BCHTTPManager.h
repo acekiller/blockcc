@@ -1,5 +1,5 @@
 //
-//  BCApiManager.h
+//  BCHTTPManager.h
 //  blockcc
 //
 //  Created by acekiller on 2018/8/21.
@@ -8,9 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-@interface BCApiManager : NSObject
+@interface BCHTTPManager : NSObject
 
-+ (instancetype) blockcc;
++ (instancetype) http;
 - (instancetype)init NS_UNAVAILABLE;
 
 @end
