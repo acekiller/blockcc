@@ -135,5 +135,6 @@ Pod::Spec.new do |s|
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   s.dependency "AFNetworking", "~> 3.0"
   s.dependency 'ReactiveObjC', '3.1.0'
+  s.dependency 'MJExtension', '~>3.0.15'
 
 end

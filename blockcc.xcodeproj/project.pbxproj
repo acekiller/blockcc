@@ -16,11 +16,19 @@
 		9A03C720212B7E4500AA4F52 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A03C71F212B7E4500AA4F52 /* main.m */; };
 		9A03C72A212B7E4500AA4F52 /* blockccTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A03C729212B7E4500AA4F52 /* blockccTests.m */; };
 		9A03C737212B834900AA4F52 /* BCApiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A03C736212B834900AA4F52 /* BCApiManager.m */; };
+		9A49B5F1212D42AA00B612D3 /* BCLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A49B5F0212D42AA00B612D3 /* BCLocation.m */; };
+		9A49B5F9212D485800B612D3 /* BCMarket.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A49B5F8212D485800B612D3 /* BCMarket.m */; };
+		9A49B5FC212D4A1300B612D3 /* BCSymbol.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A49B5FB212D4A1300B612D3 /* BCSymbol.m */; };
+		9A49B5FF212D4AC900B612D3 /* BCCurrency.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A49B5FE212D4AC900B612D3 /* BCCurrency.m */; };
+		9A49B602212D524400B612D3 /* BCMarketPair.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A49B601212D524400B612D3 /* BCMarketPair.m */; };
+		9A49B605212D546400B612D3 /* BCMarketSymbolPair.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A49B604212D546300B612D3 /* BCMarketSymbolPair.m */; };
+		9A49B608212D58C900B612D3 /* BCKLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A49B607212D58C900B612D3 /* BCKLine.m */; };
+		9A49B60B212D5D2C00B612D3 /* BCTrade.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A49B60A212D5D2C00B612D3 /* BCTrade.m */; };
+		9A49B60E212D66AE00B612D3 /* BCDepth.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A49B60D212D66AE00B612D3 /* BCDepth.m */; };
 		9A50F92B212C39C80073952C /* BCHTTPManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A50F92A212C39C80073952C /* BCHTTPManager.m */; };
 		9A50F931212C5E180073952C /* BCHTTPDefaultConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A50F930212C5E180073952C /* BCHTTPDefaultConfig.m */; };
 		9A50F934212CCE330073952C /* BCApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A50F933212CCE330073952C /* BCApi.m */; };
 		9A50F936212CD05F0073952C /* BCApi.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9A50F935212CD05F0073952C /* BCApi.plist */; };
-		9A50F939212CD3790073952C /* BCRequestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A50F938212CD3790073952C /* BCRequestModel.m */; };
 		CB343D2E825C0864A1983D90 /* Pods_blockcc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EF5B514D790F1D1ADC7446A /* Pods_blockcc.framework */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +62,25 @@
 		9A03C72B212B7E4500AA4F52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9A03C735212B834900AA4F52 /* BCApiManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BCApiManager.h; sourceTree = "<group>"; };
 		9A03C736212B834900AA4F52 /* BCApiManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BCApiManager.m; sourceTree = "<group>"; };
+		9A49B5EF212D42AA00B612D3 /* BCLocation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BCLocation.h; sourceTree = "<group>"; };
+		9A49B5F0212D42AA00B612D3 /* BCLocation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BCLocation.m; sourceTree = "<group>"; };
+		9A49B5F4212D472A00B612D3 /* BCModelHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BCModelHeader.h; sourceTree = "<group>"; };
+		9A49B5F7212D485800B612D3 /* BCMarket.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BCMarket.h; sourceTree = "<group>"; };
+		9A49B5F8212D485800B612D3 /* BCMarket.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BCMarket.m; sourceTree = "<group>"; };
+		9A49B5FA212D4A1300B612D3 /* BCSymbol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BCSymbol.h; sourceTree = "<group>"; };
+		9A49B5FB212D4A1300B612D3 /* BCSymbol.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BCSymbol.m; sourceTree = "<group>"; };
+		9A49B5FD212D4AC900B612D3 /* BCCurrency.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BCCurrency.h; sourceTree = "<group>"; };
+		9A49B5FE212D4AC900B612D3 /* BCCurrency.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BCCurrency.m; sourceTree = "<group>"; };
+		9A49B600212D524400B612D3 /* BCMarketPair.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BCMarketPair.h; sourceTree = "<group>"; };
+		9A49B601212D524400B612D3 /* BCMarketPair.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BCMarketPair.m; sourceTree = "<group>"; };
+		9A49B603212D546300B612D3 /* BCMarketSymbolPair.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BCMarketSymbolPair.h; sourceTree = "<group>"; };
+		9A49B604212D546300B612D3 /* BCMarketSymbolPair.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BCMarketSymbolPair.m; sourceTree = "<group>"; };
+		9A49B606212D58C900B612D3 /* BCKLine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BCKLine.h; sourceTree = "<group>"; };
+		9A49B607212D58C900B612D3 /* BCKLine.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BCKLine.m; sourceTree = "<group>"; };
+		9A49B609212D5D2C00B612D3 /* BCTrade.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BCTrade.h; sourceTree = "<group>"; };
+		9A49B60A212D5D2C00B612D3 /* BCTrade.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BCTrade.m; sourceTree = "<group>"; };
+		9A49B60C212D66AE00B612D3 /* BCDepth.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BCDepth.h; sourceTree = "<group>"; };
+		9A49B60D212D66AE00B612D3 /* BCDepth.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BCDepth.m; sourceTree = "<group>"; };
 		9A50F929212C39C80073952C /* BCHTTPManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BCHTTPManager.h; sourceTree = "<group>"; };
 		9A50F92A212C39C80073952C /* BCHTTPManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BCHTTPManager.m; sourceTree = "<group>"; };
 		9A50F92D212C40D20073952C /* BCHTTPConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BCHTTPConfig.h; sourceTree = "<group>"; };
@@ -62,8 +89,6 @@
 		9A50F932212CCE330073952C /* BCApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BCApi.h; sourceTree = "<group>"; };
 		9A50F933212CCE330073952C /* BCApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BCApi.m; sourceTree = "<group>"; };
 		9A50F935212CD05F0073952C /* BCApi.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = BCApi.plist; sourceTree = "<group>"; };
-		9A50F937212CD3790073952C /* BCRequestModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BCRequestModel.h; sourceTree = "<group>"; };
-		9A50F938212CD3790073952C /* BCRequestModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BCRequestModel.m; sourceTree = "<group>"; };
 		AA1F4345F3A67C25489A3847 /* Pods-blockccTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-blockccTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-blockccTests/Pods-blockccTests.release.xcconfig"; sourceTree = "<group>"; };
 		DFF029C596CFCFF9505332FD /* Pods_blockccTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_blockccTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -154,10 +179,35 @@
 				9A03C735212B834900AA4F52 /* BCApiManager.h */,
 				9A03C736212B834900AA4F52 /* BCApiManager.m */,
 				9A50F92E212C41AE0073952C /* HTTP */,
-				9A50F937212CD3790073952C /* BCRequestModel.h */,
-				9A50F938212CD3790073952C /* BCRequestModel.m */,
+				9A49B5F2212D46F000B612D3 /* Model */,
 			);
 			path = BlockChain;
+			sourceTree = "<group>";
+		};
+		9A49B5F2212D46F000B612D3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9A49B5EF212D42AA00B612D3 /* BCLocation.h */,
+				9A49B5F0212D42AA00B612D3 /* BCLocation.m */,
+				9A49B5F4212D472A00B612D3 /* BCModelHeader.h */,
+				9A49B5F7212D485800B612D3 /* BCMarket.h */,
+				9A49B5F8212D485800B612D3 /* BCMarket.m */,
+				9A49B5FA212D4A1300B612D3 /* BCSymbol.h */,
+				9A49B5FB212D4A1300B612D3 /* BCSymbol.m */,
+				9A49B5FD212D4AC900B612D3 /* BCCurrency.h */,
+				9A49B5FE212D4AC900B612D3 /* BCCurrency.m */,
+				9A49B600212D524400B612D3 /* BCMarketPair.h */,
+				9A49B601212D524400B612D3 /* BCMarketPair.m */,
+				9A49B603212D546300B612D3 /* BCMarketSymbolPair.h */,
+				9A49B604212D546300B612D3 /* BCMarketSymbolPair.m */,
+				9A49B606212D58C900B612D3 /* BCKLine.h */,
+				9A49B607212D58C900B612D3 /* BCKLine.m */,
+				9A49B609212D5D2C00B612D3 /* BCTrade.h */,
+				9A49B60A212D5D2C00B612D3 /* BCTrade.m */,
+				9A49B60C212D66AE00B612D3 /* BCDepth.h */,
+				9A49B60D212D66AE00B612D3 /* BCDepth.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		9A50F92E212C41AE0073952C /* HTTP */ = {
@@ -289,11 +339,13 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-blockcc/Pods-blockcc-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/MJExtension/MJExtension.framework",
 				"${BUILT_PRODUCTS_DIR}/ReactiveObjC/ReactiveObjC.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJExtension.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveObjC.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -344,14 +396,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A49B608212D58C900B612D3 /* BCKLine.m in Sources */,
+				9A49B5FC212D4A1300B612D3 /* BCSymbol.m in Sources */,
+				9A49B605212D546400B612D3 /* BCMarketSymbolPair.m in Sources */,
 				9A03C715212B7E4500AA4F52 /* ViewController.m in Sources */,
 				9A03C720212B7E4500AA4F52 /* main.m in Sources */,
-				9A50F939212CD3790073952C /* BCRequestModel.m in Sources */,
 				9A50F931212C5E180073952C /* BCHTTPDefaultConfig.m in Sources */,
 				9A50F934212CCE330073952C /* BCApi.m in Sources */,
 				9A03C712212B7E4500AA4F52 /* AppDelegate.m in Sources */,
+				9A49B5FF212D4AC900B612D3 /* BCCurrency.m in Sources */,
+				9A49B5F1212D42AA00B612D3 /* BCLocation.m in Sources */,
 				9A50F92B212C39C80073952C /* BCHTTPManager.m in Sources */,
+				9A49B60B212D5D2C00B612D3 /* BCTrade.m in Sources */,
 				9A03C737212B834900AA4F52 /* BCApiManager.m in Sources */,
+				9A49B5F9212D485800B612D3 /* BCMarket.m in Sources */,
+				9A49B60E212D66AE00B612D3 /* BCDepth.m in Sources */,
+				9A49B602212D524400B612D3 /* BCMarketPair.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

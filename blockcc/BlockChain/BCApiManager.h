@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import <ReactiveObjC/ReactiveObjC.h>
+#import "BCHTTPManager.h"
+#import "BCModelHeader.h"
 #import "BCApi.h"
 
 @interface BCApiManager : NSObject
@@ -17,6 +19,18 @@
 + (instancetype) blockcc;
 - (instancetype)init NS_UNAVAILABLE;
 
-- (RACSignal *) getDataWithApi:(NSString *)api;
+- (RACSignal *) getLocalIPLocation;
+- (RACSignal *) getIPLocation:(NSString *)ip_address;
+//交易所列表
+- (RACSignal *) getMarkets;
+- (RACSignal *) getSymbols;
+- (RACSignal *) getCurrencies;
+- (RACSignal *) getMarketPair;
+- (RACSignal *) getMarket;  //获取制定交易所信息
+
+- (RACSignal *) getKLine:(BCMarketSymbolPair *)pair;
+- (RACSignal *) getTrade:(BCMarketSymbolPair *)pair;
+- (RACSignal *) getDepth:(BCMarketSymbolPair *)pair;
+//- (RACSignal *) getTrade:(BCMarketSymbolPair *)pair;
 
 @end

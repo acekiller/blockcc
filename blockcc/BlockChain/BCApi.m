@@ -31,61 +31,69 @@
 }
 
 - (NSString *)ip {
-    return [self url:NSStringFromSelector(_cmd)];
+    return [self relativePath:NSStringFromSelector(_cmd)];
 }
 
 - (NSString *)ip_ip_address {
-    return [self url:NSStringFromSelector(_cmd)];
+    return [self relativePath:NSStringFromSelector(_cmd)];
 }
 
 //Exchange Rate
 - (NSString *)exrate {
-    return [self url:NSStringFromSelector(_cmd)];
+    return [self relativePath:NSStringFromSelector(_cmd)];
+}
+
+- (NSString *)currencies {
+    return [self relativePath:NSStringFromSelector(_cmd)];
 }
 
 //BlockChain Data
 - (NSString *)tx_txhash {
-    return [self url:NSStringFromSelector(_cmd)];
+    return [self relativePath:NSStringFromSelector(_cmd)];
 }
 - (NSString *)address_address {
-    return [self url:NSStringFromSelector(_cmd)];
+    return [self relativePath:NSStringFromSelector(_cmd)];
 }
 
 //Market List
 - (NSString *)markets {
-    return [self url:NSStringFromSelector(_cmd)];
+    return [self relativePath:NSStringFromSelector(_cmd)];
 }
 - (NSString *)symbols {
-    return [self url:NSStringFromSelector(_cmd)];
+    return [self relativePath:NSStringFromSelector(_cmd)];
 }
 - (NSString *)market_pairs {
-    return [self url:NSStringFromSelector(_cmd)];
+    return [self relativePath:NSStringFromSelector(_cmd)];
 }
 - (NSString *)market_market {
-    return [self url:NSStringFromSelector(_cmd)];
+    return [self relativePath:NSStringFromSelector(_cmd)];
 }
 
 //Market Data
 - (NSString *)ticker {
-    return [self url:NSStringFromSelector(_cmd)];
+    return [self relativePath:NSStringFromSelector(_cmd)];
 }
 - (NSString *)tickers {
-    return [self url:NSStringFromSelector(_cmd)];
+    return [self relativePath:NSStringFromSelector(_cmd)];
 }
 - (NSString *)depth {
-    return [self url:NSStringFromSelector(_cmd)];
+    return [self relativePath:NSStringFromSelector(_cmd)];
 }
 - (NSString *)kline {
-    return [self url:NSStringFromSelector(_cmd)];
+    return [self relativePath:NSStringFromSelector(_cmd)];
 }
 - (NSString *)price {
-    return [self url:NSStringFromSelector(_cmd)];
+    return [self relativePath:NSStringFromSelector(_cmd)];
 }
 - (NSString *)price_history {
-    return [self url:NSStringFromSelector(_cmd)];
+    return [self relativePath:NSStringFromSelector(_cmd)];
 }
 - (NSString *)new_pairs {
-    return [self url:NSStringFromSelector(_cmd)];
+    return [self relativePath:NSStringFromSelector(_cmd)];
+}
+
+- (NSString *)trade {
+    return [self relativePath:NSStringFromSelector(_cmd)];
 }
 
 @end

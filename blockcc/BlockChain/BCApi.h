@@ -18,6 +18,8 @@
 //Exchange Rate
 - (NSString *)exrate;   //Exchange Rate
 
+- (NSString *)currencies;   //currencies
+
 //BlockChain Data
 - (NSString *)tx_txhash;   //BlockChain Transaction Data
 - (NSString *)address_address;  //BlockChain Address Data
@@ -36,4 +38,5 @@
 - (NSString *)price; //Price Index
 - (NSString *)price_history;    //Price Index
 - (NSString *)new_pairs; // New SymbolPairs
+- (NSString *)trade;
 @end

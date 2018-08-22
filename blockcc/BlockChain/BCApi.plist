@@ -32,5 +32,7 @@
 	<string>price/history</string>
 	<key>new_pairs</key>
 	<string>new_pairs</string>
+	<key>currencies</key>
+	<string>currencies</string>
 </dict>
 </plist>
