@@ -24,76 +24,86 @@
     return self;
 }
 
-- (NSString *) relativePath:(NSString *)api {
+- (NSString *) apiName:(NSString *)api {
     NSString *relativePath = [apis valueForKey:@"api"];
     NSAssert(relativePath, @"api can not null");
     return relativePath;
 }
 
 - (NSString *)ip {
-    return [self relativePath:NSStringFromSelector(_cmd)];
+    return [self apiName:NSStringFromSelector(_cmd)];
 }
 
 - (NSString *)ip_ip_address {
-    return [self relativePath:NSStringFromSelector(_cmd)];
+    return [self apiName:NSStringFromSelector(_cmd)];
 }
 
 //Exchange Rate
 - (NSString *)exrate {
-    return [self relativePath:NSStringFromSelector(_cmd)];
+    return [self apiName:NSStringFromSelector(_cmd)];
 }
 
 - (NSString *)currencies {
-    return [self relativePath:NSStringFromSelector(_cmd)];
+    return [self apiName:NSStringFromSelector(_cmd)];
 }
 
 //BlockChain Data
 - (NSString *)tx_txhash {
-    return [self relativePath:NSStringFromSelector(_cmd)];
+    return [self apiName:NSStringFromSelector(_cmd)];
 }
 - (NSString *)address_address {
-    return [self relativePath:NSStringFromSelector(_cmd)];
+    return [self apiName:NSStringFromSelector(_cmd)];
 }
 
 //Market List
 - (NSString *)markets {
-    return [self relativePath:NSStringFromSelector(_cmd)];
+    return [self apiName:NSStringFromSelector(_cmd)];
 }
 - (NSString *)symbols {
-    return [self relativePath:NSStringFromSelector(_cmd)];
+    return [self apiName:NSStringFromSelector(_cmd)];
 }
 - (NSString *)market_pairs {
-    return [self relativePath:NSStringFromSelector(_cmd)];
+    return [self apiName:NSStringFromSelector(_cmd)];
 }
 - (NSString *)market_market {
-    return [self relativePath:NSStringFromSelector(_cmd)];
+    return [self apiName:NSStringFromSelector(_cmd)];
 }
 
 //Market Data
 - (NSString *)ticker {
-    return [self relativePath:NSStringFromSelector(_cmd)];
+    return [self apiName:NSStringFromSelector(_cmd)];
 }
 - (NSString *)tickers {
-    return [self relativePath:NSStringFromSelector(_cmd)];
+    return [self apiName:NSStringFromSelector(_cmd)];
 }
 - (NSString *)depth {
-    return [self relativePath:NSStringFromSelector(_cmd)];
+    return [self apiName:NSStringFromSelector(_cmd)];
 }
 - (NSString *)kline {
-    return [self relativePath:NSStringFromSelector(_cmd)];
+    return [self apiName:NSStringFromSelector(_cmd)];
 }
 - (NSString *)price {
-    return [self relativePath:NSStringFromSelector(_cmd)];
+    return [self apiName:NSStringFromSelector(_cmd)];
 }
 - (NSString *)price_history {
-    return [self relativePath:NSStringFromSelector(_cmd)];
+    return [self apiName:NSStringFromSelector(_cmd)];
 }
 - (NSString *)new_pairs {
-    return [self relativePath:NSStringFromSelector(_cmd)];
+    return [self apiName:NSStringFromSelector(_cmd)];
 }
 
 - (NSString *)trade {
-    return [self relativePath:NSStringFromSelector(_cmd)];
+    return [self apiName:NSStringFromSelector(_cmd)];
+}
+
+- (NSString *) relativePath:(NSString *)api {
+    NSString *relationPath = apis[api][@"api"];
+    NSAssert(relationPath != nil, @"%@ can not null", api);
+    return relationPath;
+}
+
+- (NSDictionary *) parameterNames:(NSString *)api {
+    return apis[api][@"params"];
 }
 
 @end

@@ -66,8 +66,10 @@ static id<BCHTTPConfig> httpConfig = nil;
     if (![self isFullUrl:urlPath]) {
         urlStr = [[[self class].config baseURL] stringByAppendingPathComponent:urlPath];
     }
-    urlStr = [urlStr stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
-    return [self.manager GET:urlStr parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+    urlStr = [self adapterURLPath:urlStr parameters:parameters];
+    NSDictionary *filteredParameters = [self ignoreRestfulParameters:parameters forUrlPath:urlPath];
+    urlStr = [urlStr stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];;
+    return [self.manager GET:urlStr parameters:filteredParameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         completion ? completion(task, responseObject) : nil;
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         failure ? failure(task, error) : nil;
@@ -95,6 +97,34 @@ static id<BCHTTPConfig> httpConfig = nil;
                             }];
         return [RACDisposable disposableWithBlock:^{}];
     }];
+}
+
+- (NSDictionary *)ignoreRestfulParameters:(NSDictionary *)parameters forUrlPath:(NSString *)urlPath {
+    NSString *pattern = @"\\{[a-z,_,A-Z,0-9]+\\}";
+    NSError *error = nil;
+    NSRegularExpression *regExp = [[NSRegularExpression alloc] initWithPattern:pattern options:NSRegularExpressionAnchorsMatchLines error:&error];
+    NSArray *checkResults = [regExp matchesInString:urlPath options:NSMatchingReportCompletion range:NSMakeRange(0, urlPath.length)];
+    NSMutableDictionary *dic = [parameters mutableCopy];
+    for (NSTextCheckingResult *check in checkResults) {
+        NSString *fetchText = [urlPath substringWithRange:check.range];
+        NSString *key = [fetchText substringWithRange:NSMakeRange(1, fetchText.length - 2)];
+        [dic removeObjectForKey:key];
+    }
+    return dic;
+}
+
+- (NSString *)restfulAdapter:(NSString *)urlPath parameters:(NSDictionary *)parameters {
+    NSString *pattern = @"\\{[a-z,_,A-Z,0-9]+\\}";
+    NSError *error = nil;
+    NSRegularExpression *regExp = [[NSRegularExpression alloc] initWithPattern:pattern options:NSRegularExpressionAnchorsMatchLines error:&error];
+    NSArray *checkResults = [regExp matchesInString:urlPath options:NSMatchingReportCompletion range:NSMakeRange(0, urlPath.length)];
+    NSString *adapterURLStr = [NSString stringWithString:urlPath];
+    for (NSTextCheckingResult *check in checkResults) {
+        NSString *fetchText = [urlPath substringWithRange:check.range];
+        NSString *key = [fetchText substringWithRange:NSMakeRange(1, fetchText.length - 2)];
+        adapterURLStr = [adapterURLStr stringByReplacingOccurrencesOfString:fetchText withString:[parameters[key] description]];
+    }
+    return adapterURLStr;
 }
 
 @end

@@ -10,7 +10,6 @@
 
 @interface BCApi : NSObject
 
-- (NSString *) relativePath:(NSString *)api;
 //IP Location
 - (NSString *)ip;   //Your IP to Location
 - (NSString *)ip_ip_address;  //IP to Location
@@ -39,4 +38,7 @@
 - (NSString *)price_history;    //Price Index
 - (NSString *)new_pairs; // New SymbolPairs
 - (NSString *)trade;
+
+- (NSString *) relativePath:(NSString *)api;
+- (NSDictionary *) parameterNames:(NSString *)api;
 @end

@@ -25,6 +25,9 @@
 		9A49B608212D58C900B612D3 /* BCKLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A49B607212D58C900B612D3 /* BCKLine.m */; };
 		9A49B60B212D5D2C00B612D3 /* BCTrade.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A49B60A212D5D2C00B612D3 /* BCTrade.m */; };
 		9A49B60E212D66AE00B612D3 /* BCDepth.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A49B60D212D66AE00B612D3 /* BCDepth.m */; };
+		9A50B146212E55790092B0B6 /* BCTicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A50B145212E55790092B0B6 /* BCTicker.m */; };
+		9A50B149212E593E0092B0B6 /* BCTickerPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A50B148212E593E0092B0B6 /* BCTickerPage.m */; };
+		9A50B14D212E9CC80092B0B6 /* BCIPRequestPair.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A50B14C212E9CC80092B0B6 /* BCIPRequestPair.m */; };
 		9A50F92B212C39C80073952C /* BCHTTPManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A50F92A212C39C80073952C /* BCHTTPManager.m */; };
 		9A50F931212C5E180073952C /* BCHTTPDefaultConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A50F930212C5E180073952C /* BCHTTPDefaultConfig.m */; };
 		9A50F934212CCE330073952C /* BCApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A50F933212CCE330073952C /* BCApi.m */; };
@@ -81,6 +84,13 @@
 		9A49B60A212D5D2C00B612D3 /* BCTrade.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BCTrade.m; sourceTree = "<group>"; };
 		9A49B60C212D66AE00B612D3 /* BCDepth.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BCDepth.h; sourceTree = "<group>"; };
 		9A49B60D212D66AE00B612D3 /* BCDepth.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BCDepth.m; sourceTree = "<group>"; };
+		9A50B144212E55790092B0B6 /* BCTicker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BCTicker.h; sourceTree = "<group>"; };
+		9A50B145212E55790092B0B6 /* BCTicker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BCTicker.m; sourceTree = "<group>"; };
+		9A50B147212E593E0092B0B6 /* BCTickerPage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BCTickerPage.h; sourceTree = "<group>"; };
+		9A50B148212E593E0092B0B6 /* BCTickerPage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BCTickerPage.m; sourceTree = "<group>"; };
+		9A50B14A212E9B910092B0B6 /* BCRequstPairs.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BCRequstPairs.h; sourceTree = "<group>"; };
+		9A50B14B212E9CC80092B0B6 /* BCIPRequestPair.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BCIPRequestPair.h; sourceTree = "<group>"; };
+		9A50B14C212E9CC80092B0B6 /* BCIPRequestPair.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BCIPRequestPair.m; sourceTree = "<group>"; };
 		9A50F929212C39C80073952C /* BCHTTPManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BCHTTPManager.h; sourceTree = "<group>"; };
 		9A50F92A212C39C80073952C /* BCHTTPManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BCHTTPManager.m; sourceTree = "<group>"; };
 		9A50F92D212C40D20073952C /* BCHTTPConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BCHTTPConfig.h; sourceTree = "<group>"; };
@@ -187,6 +197,7 @@
 		9A49B5F2212D46F000B612D3 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				9A50B14A212E9B910092B0B6 /* BCRequstPairs.h */,
 				9A49B5EF212D42AA00B612D3 /* BCLocation.h */,
 				9A49B5F0212D42AA00B612D3 /* BCLocation.m */,
 				9A49B5F4212D472A00B612D3 /* BCModelHeader.h */,
@@ -206,6 +217,12 @@
 				9A49B60A212D5D2C00B612D3 /* BCTrade.m */,
 				9A49B60C212D66AE00B612D3 /* BCDepth.h */,
 				9A49B60D212D66AE00B612D3 /* BCDepth.m */,
+				9A50B144212E55790092B0B6 /* BCTicker.h */,
+				9A50B145212E55790092B0B6 /* BCTicker.m */,
+				9A50B147212E593E0092B0B6 /* BCTickerPage.h */,
+				9A50B148212E593E0092B0B6 /* BCTickerPage.m */,
+				9A50B14B212E9CC80092B0B6 /* BCIPRequestPair.h */,
+				9A50B14C212E9CC80092B0B6 /* BCIPRequestPair.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -398,9 +415,11 @@
 			files = (
 				9A49B608212D58C900B612D3 /* BCKLine.m in Sources */,
 				9A49B5FC212D4A1300B612D3 /* BCSymbol.m in Sources */,
+				9A50B14D212E9CC80092B0B6 /* BCIPRequestPair.m in Sources */,
 				9A49B605212D546400B612D3 /* BCMarketSymbolPair.m in Sources */,
 				9A03C715212B7E4500AA4F52 /* ViewController.m in Sources */,
 				9A03C720212B7E4500AA4F52 /* main.m in Sources */,
+				9A50B149212E593E0092B0B6 /* BCTickerPage.m in Sources */,
 				9A50F931212C5E180073952C /* BCHTTPDefaultConfig.m in Sources */,
 				9A50F934212CCE330073952C /* BCApi.m in Sources */,
 				9A03C712212B7E4500AA4F52 /* AppDelegate.m in Sources */,
@@ -408,6 +427,7 @@
 				9A49B5F1212D42AA00B612D3 /* BCLocation.m in Sources */,
 				9A50F92B212C39C80073952C /* BCHTTPManager.m in Sources */,
 				9A49B60B212D5D2C00B612D3 /* BCTrade.m in Sources */,
+				9A50B146212E55790092B0B6 /* BCTicker.m in Sources */,
 				9A03C737212B834900AA4F52 /* BCApiManager.m in Sources */,
 				9A49B5F9212D485800B612D3 /* BCMarket.m in Sources */,
 				9A49B60E212D66AE00B612D3 /* BCDepth.m in Sources */,

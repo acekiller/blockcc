@@ -27,6 +27,19 @@
 - (void)testExample {
     // This is an example of a functional test case.
     // Use XCTAssert and related functions to verify your tests produce the correct results.
+    NSString *urlPath = @"http://baidu.com/app/api/v1/address/{ip_address}/aflda";
+    NSDictionary *parameters = @{@"ip_address" : @"abcdes"};
+    NSString *pattern = @"\\{[a-z,_,A-Z,0-9]+\\}";
+    NSError *error = nil;
+    NSRegularExpression *regExp = [[NSRegularExpression alloc] initWithPattern:pattern options:NSRegularExpressionAnchorsMatchLines error:&error];
+    NSArray *checkResults = [regExp matchesInString:urlPath options:NSMatchingReportCompletion range:NSMakeRange(0, urlPath.length)];
+    NSString *adapterURLStr = [NSString stringWithString:urlPath];
+    for (NSTextCheckingResult *check in checkResults) {
+        NSString *fetchText = [urlPath substringWithRange:check.range];
+        NSString *key = [fetchText substringWithRange:NSMakeRange(1, fetchText.length - 2)];
+        adapterURLStr = [adapterURLStr stringByReplacingOccurrencesOfString:fetchText withString:[parameters[key] description]];
+    }
+    NSLog(@"%@", adapterURLStr);
 }
 
 - (void)testPerformanceExample {

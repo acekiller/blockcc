@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "BCLocation.h"
+#import "BCIPRequestPair.h"
 #import "BCMarket.h"
 #import "BCSymbol.h"
 #import "BCCurrency.h"
@@ -16,4 +17,6 @@
 #import "BCKLine.h"
 #import "BCTrade.h"
 #import "BCDepth.h"
+#import "BCTicker.h"
+#import "BCTickerPage.h"
 

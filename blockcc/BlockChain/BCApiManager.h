@@ -20,7 +20,7 @@
 - (instancetype)init NS_UNAVAILABLE;
 
 - (RACSignal *) getLocalIPLocation;
-- (RACSignal *) getIPLocation:(NSString *)ip_address;
+- (RACSignal *) getIPLocation:(BCIPRequestPair *)pairs;
 //交易所列表
 - (RACSignal *) getMarkets;
 - (RACSignal *) getSymbols;
@@ -28,9 +28,11 @@
 - (RACSignal *) getMarketPair;
 - (RACSignal *) getMarket;  //获取制定交易所信息
 
-- (RACSignal *) getKLine:(BCMarketSymbolPair *)pair;
-- (RACSignal *) getTrade:(BCMarketSymbolPair *)pair;
-- (RACSignal *) getDepth:(BCMarketSymbolPair *)pair;
-//- (RACSignal *) getTrade:(BCMarketSymbolPair *)pair;
+- (RACSignal *) getKLine:(BCMarketSymbolPair *)pairs;
+- (RACSignal *) getTrade:(BCMarketSymbolPair *)pairs;
+- (RACSignal *) getDepth:(BCMarketSymbolPair *)pairs;
+
+- (RACSignal *) getTicker:(BCMarketSymbolPair *)pairs;
+- (RACSignal *) getTickers:(BCMarketSymbolPair *)pairs;
 
 @end

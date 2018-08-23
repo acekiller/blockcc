@@ -3,36 +3,176 @@
 <plist version="1.0">
 <dict>
 	<key>ip</key>
-	<string>ip</string>
+	<dict>
+		<key>api</key>
+		<string>ip</string>
+	</dict>
 	<key>ip_ip_address</key>
-	<string>ip/{ip_address}</string>
+	<dict>
+		<key>api</key>
+		<string>ip/{ip_address}</string>
+		<key>params</key>
+		<array>
+			<string>ip_address</string>
+		</array>
+	</dict>
 	<key>exrate</key>
-	<string>exrate</string>
+	<dict>
+		<key>api</key>
+		<string>exrate</string>
+		<key>params</key>
+		<array>
+			<string>symbol</string>
+			<string>base</string>
+		</array>
+	</dict>
 	<key>tx_txhash</key>
-	<string>tx/{txhash}</string>
+	<dict>
+		<key>api</key>
+		<string>tx/{txhash}</string>
+		<key>params</key>
+		<array>
+			<string>txhash</string>
+		</array>
+	</dict>
 	<key>address_address</key>
-	<string>address/{address}</string>
+	<dict>
+		<key>api</key>
+		<string>address/{address}</string>
+		<key>params</key>
+		<array>
+			<string>address</string>
+		</array>
+	</dict>
 	<key>markets</key>
-	<string>markets</string>
+	<dict>
+		<key>api</key>
+		<string>markets</string>
+	</dict>
 	<key>symbols</key>
-	<string>symbols</string>
+	<dict>
+		<key>api</key>
+		<string>symbols</string>
+	</dict>
 	<key>market_pairs</key>
-	<string>market_pairs</string>
+	<dict>
+		<key>api</key>
+		<string>market_pairs</string>
+	</dict>
 	<key>market_market</key>
-	<string>market/{market}</string>
+	<dict>
+		<key>api</key>
+		<string>market/{market}</string>
+		<key>params</key>
+		<array>
+			<string>market</string>
+		</array>
+	</dict>
 	<key>ticker</key>
-	<string>ticker</string>
+	<dict>
+		<key>params</key>
+		<array>
+			<string>market</string>
+			<string>symbol_pair</string>
+		</array>
+		<key>api</key>
+		<string>ticker</string>
+	</dict>
 	<key>tickers</key>
-	<string>tickers</string>
+	<dict>
+		<key>params</key>
+		<array>
+			<string>market</string>
+			<string>symbol</string>
+			<string>symbol_name</string>
+			<string>market_pair</string>
+			<string>currency</string>
+			<string>page</string>
+			<string>size</string>
+		</array>
+		<key>api</key>
+		<string>tickers</string>
+	</dict>
 	<key>depth</key>
-	<string>kline</string>
+	<dict>
+		<key>params</key>
+		<array>
+			<string>market</string>
+			<string>symbol_pair</string>
+			<string>limit</string>
+		</array>
+		<key>api</key>
+		<string>depth</string>
+	</dict>
+	<key>trade</key>
+	<dict>
+		<key>params</key>
+		<array>
+			<string>market</string>
+			<string>symbol_pair</string>
+			<string>limit</string>
+		</array>
+		<key>api</key>
+		<string>trade</string>
+	</dict>
+	<key>kline</key>
+	<dict>
+		<key>api</key>
+		<string>kline</string>
+		<key>params</key>
+		<array>
+			<string>market</string>
+			<string>symbol_pair</string>
+			<string>type</string>
+			<string>limit</string>
+		</array>
+	</dict>
 	<key>price</key>
-	<string>price</string>
+	<dict>
+		<key>api</key>
+		<string>price</string>
+		<key>params</key>
+		<array>
+			<string>symbol_name</string>
+			<string>symbol</string>
+		</array>
+	</dict>
 	<key>price_history</key>
-	<string>price/history</string>
+	<dict>
+		<key>api</key>
+		<string>price/history</string>
+		<key>params</key>
+		<array>
+			<string>symbol_name</string>
+			<string>symbol</string>
+			<string>limit</string>
+		</array>
+	</dict>
 	<key>new_pairs</key>
-	<string>new_pairs</string>
+	<dict>
+		<key>api</key>
+		<string>new_pairs</string>
+		<key>params</key>
+		<array>
+			<string>page</string>
+			<string>size</string>
+		</array>
+	</dict>
 	<key>currencies</key>
-	<string>currencies</string>
+	<dict>
+		<key>api</key>
+		<string>currencies</string>
+	</dict>
+	<key>exchange_rate</key>
+	<dict>
+		<key>api</key>
+		<string>exchange_rate</string>
+		<key>params</key>
+		<array>
+			<string>base</string>
+			<string>symbols</string>
+			<string>format</string>
+		</array>
+	</dict>
 </dict>
 </plist>

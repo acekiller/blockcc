@@ -23,4 +23,6 @@ typedef void(^FailureHandle)(NSURLSessionTask *, NSError *);
 //urlPath可以为相对路径，也可为绝对路径，若为相对路径将依赖于config配置的路径信息.
 - (RACSignal *)getRequest:(NSString *)urlPath parameters:(NSDictionary *)parameters;
 
+- (NSString *)adapterURLPath:(NSString *)urlPath parameters:(NSDictionary *)parameters;
+
 @end

@@ -59,34 +59,34 @@
 //}
 
 - (RACSignal *)getLocalIPLocation {
-    return [[self getRequest:self.api.ip parameters:nil]
+    return [[self getRequest:self.api.ip pairs:nil]
             map:^id _Nullable(id  _Nullable value) {
                 return [BCLocation mj_objectWithKeyValues:value];
             }];
 }
 
-- (RACSignal *)getIPLocation:(NSString *)ip_address {
-    return [[self getRequest:self.api.ip_ip_address parameters:@{@"ip_address" : NilSafe(ip_address)}]
+- (RACSignal *)getIPLocation:(BCIPRequestPair *)pairs {
+    return [[self getRequest:self.api.ip_ip_address pairs:pairs]
             map:^id _Nullable(id  _Nullable value) {
                 return [BCLocation mj_objectWithKeyValues:value];
             }];
 }
 
 - (RACSignal *)getMarkets {
-    return [[self getRequest:self.api.markets parameters:nil]
+    return [[self getRequest:self.api.markets pairs:nil]
             map:^id _Nullable(id  _Nullable value) {
                 return [BCMarket mj_objectArrayWithKeyValuesArray:value];
             }];
 }
 
 - (RACSignal *) getSymbols {
-    return [[self getRequest:self.api.symbols parameters:nil]
+    return [[self getRequest:self.api.symbols pairs:nil]
             map:^id _Nullable(id  _Nullable value) {
                 return [BCMarket mj_objectArrayWithKeyValuesArray:value];
             }];
 }
 - (RACSignal *) getCurrencies {
-    return [[self getRequest:self.api.currencies parameters:nil]
+    return [[self getRequest:self.api.currencies pairs:nil]
             map:^id _Nullable(id  _Nullable value) {
                 return value;
 //                return [BCMarket mj_objectArrayWithKeyValuesArray:value];
@@ -94,21 +94,21 @@
 }
 
 - (RACSignal *) getMarketPair {
-    return [[self getRequest:self.api.market_pairs parameters:nil]
+    return [[self getRequest:self.api.market_pairs pairs:nil]
             map:^id _Nullable(id  _Nullable value) {
                 return [BCMarketPair mj_objectArrayWithKeyValuesArray:value];
             }];
 }
 
 - (RACSignal *) getMarket {
-    return [[self getRequest:self.api.market_pairs parameters:nil]
+    return [[self getRequest:self.api.market_pairs pairs:nil]
             map:^id _Nullable(id  _Nullable value) {
                 return [BCMarket mj_objectWithKeyValues:value];
             }];
 }
 
 - (RACSignal *) getKLine:(BCMarketSymbolPair *)pair {
-    return [[self getRequest:self.api.kline parameters:pair.pairJson]
+    return [[self getRequest:self.api.kline pairs:pair]
             map:^id _Nullable(id  _Nullable value) {
                 if (![value isKindOfClass:[NSArray class]]) {
                     return value;
@@ -125,21 +125,35 @@
 }
 
 - (RACSignal *) getTrade:(BCMarketSymbolPair *)pair {
-    return [[self getRequest:self.api.trade parameters:pair.pairJson]
+    return [[self getRequest:self.api.trade pairs:pair]
             map:^id _Nullable(id  _Nullable value) {
                 return [BCTrade mj_objectArrayWithKeyValuesArray:value];
             }];
 }
 
 - (RACSignal *) getDepth:(BCMarketSymbolPair *)pair {
-    return [[self getRequest:self.api.depth parameters:pair.pairJson]
+    return [[self getRequest:self.api.depth pairs:pair]
             map:^id _Nullable(id  _Nullable value) {
                 return [BCDepth mj_objectArrayWithKeyValuesArray:value];
             }];
 }
 
-- (RACSignal *)getRequest:(NSString *)api parameters:(NSDictionary *)parameters {
-    return [[self.httpManager getRequest:api parameters:parameters]
+- (RACSignal *) getTicker:(BCMarketSymbolPair *)pair {
+    return [[self getRequest:self.api.ticker pairs:pair]
+            map:^id _Nullable(id  _Nullable value) {
+                return [BCTicker mj_objectWithKeyValues:value];
+            }];
+}
+
+- (RACSignal *) getTickers:(BCMarketSymbolPair *)pair {
+    return [[self getRequest:self.api.tickers pairs:pair]
+            map:^id _Nullable(id  _Nullable value) {
+                return [BCTickerPage mj_objectWithKeyValues:value];
+            }];
+}
+
+- (RACSignal *)getRequest:(NSString *)api pairs:(id<BCRequstPairs>)pairs {
+    return [[self.httpManager getRequest:api parameters:pairs.pairJson]
             flattenMap:^__kindof RACSignal * _Nullable(id  _Nullable value) {
                 NSInteger code = [value[@"code"] integerValue];
                 NSString *msg = value[@"message"];
