@@ -7,13 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "BCLocation.h"
+
 #import "BCIPRequestPair.h"
+#import "BCMarketSymbolPair.h"
+#import "BCNodeRequestPairs.h"
+
+#import "BCLocation.h"
 #import "BCMarket.h"
 #import "BCSymbol.h"
 #import "BCCurrency.h"
 #import "BCMarketPair.h"
-#import "BCMarketSymbolPair.h"
 #import "BCKLine.h"
 #import "BCTrade.h"
 #import "BCDepth.h"

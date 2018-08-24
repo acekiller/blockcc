@@ -6,9 +6,8 @@
 //  Copyright © 2018年 acekiller. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
 #import "BCRequstPairs.h"
 
-@interface BCIPRequestPair : NSObject <BCRequstPairs>
+@interface BCIPRequestPair : BCRequstPairs
 @property (nonatomic, strong) NSString *ip_address;
 @end

@@ -14,3 +14,7 @@
 - (NSDictionary *) pairJson:(NSArray *)contains;
 
 @end
+
+@interface BCRequstPairs : NSObject <BCRequstPairs>
+
+@end

@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "BCRequstPairs.h"
 
-@interface BCMarketSymbolPair : NSObject <BCRequstPairs>
+@interface BCMarketSymbolPair : BCRequstPairs
 @property (nonatomic, strong) NSString *market; //是    交易所名称，可传多个，逗号分割
 @property (nonatomic, strong) NSString *symbol_pair; //是    交易所-交易对，可传多个，逗号分割
 @property (nonatomic, strong) NSString *symbol; //是    币种符号，可传多个，逗号分割

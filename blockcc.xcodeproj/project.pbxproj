@@ -25,6 +25,8 @@
 		9A49B608212D58C900B612D3 /* BCKLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A49B607212D58C900B612D3 /* BCKLine.m */; };
 		9A49B60B212D5D2C00B612D3 /* BCTrade.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A49B60A212D5D2C00B612D3 /* BCTrade.m */; };
 		9A49B60E212D66AE00B612D3 /* BCDepth.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A49B60D212D66AE00B612D3 /* BCDepth.m */; };
+		9A4E8D3A212FD19D0065FE04 /* BCNodeRequestPairs.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A4E8D39212FD19D0065FE04 /* BCNodeRequestPairs.m */; };
+		9A4E8D3C212FD22A0065FE04 /* BCRequstPairs.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A4E8D3B212FD22A0065FE04 /* BCRequstPairs.m */; };
 		9A50B146212E55790092B0B6 /* BCTicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A50B145212E55790092B0B6 /* BCTicker.m */; };
 		9A50B149212E593E0092B0B6 /* BCTickerPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A50B148212E593E0092B0B6 /* BCTickerPage.m */; };
 		9A50B14D212E9CC80092B0B6 /* BCIPRequestPair.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A50B14C212E9CC80092B0B6 /* BCIPRequestPair.m */; };
@@ -84,6 +86,9 @@
 		9A49B60A212D5D2C00B612D3 /* BCTrade.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BCTrade.m; sourceTree = "<group>"; };
 		9A49B60C212D66AE00B612D3 /* BCDepth.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BCDepth.h; sourceTree = "<group>"; };
 		9A49B60D212D66AE00B612D3 /* BCDepth.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BCDepth.m; sourceTree = "<group>"; };
+		9A4E8D38212FD19D0065FE04 /* BCNodeRequestPairs.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BCNodeRequestPairs.h; sourceTree = "<group>"; };
+		9A4E8D39212FD19D0065FE04 /* BCNodeRequestPairs.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BCNodeRequestPairs.m; sourceTree = "<group>"; };
+		9A4E8D3B212FD22A0065FE04 /* BCRequstPairs.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BCRequstPairs.m; sourceTree = "<group>"; };
 		9A50B144212E55790092B0B6 /* BCTicker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BCTicker.h; sourceTree = "<group>"; };
 		9A50B145212E55790092B0B6 /* BCTicker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BCTicker.m; sourceTree = "<group>"; };
 		9A50B147212E593E0092B0B6 /* BCTickerPage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BCTickerPage.h; sourceTree = "<group>"; };
@@ -197,34 +202,45 @@
 		9A49B5F2212D46F000B612D3 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				9A50B14A212E9B910092B0B6 /* BCRequstPairs.h */,
-				9A49B5EF212D42AA00B612D3 /* BCLocation.h */,
-				9A49B5F0212D42AA00B612D3 /* BCLocation.m */,
-				9A49B5F4212D472A00B612D3 /* BCModelHeader.h */,
-				9A49B5F7212D485800B612D3 /* BCMarket.h */,
-				9A49B5F8212D485800B612D3 /* BCMarket.m */,
-				9A49B5FA212D4A1300B612D3 /* BCSymbol.h */,
-				9A49B5FB212D4A1300B612D3 /* BCSymbol.m */,
 				9A49B5FD212D4AC900B612D3 /* BCCurrency.h */,
 				9A49B5FE212D4AC900B612D3 /* BCCurrency.m */,
-				9A49B600212D524400B612D3 /* BCMarketPair.h */,
-				9A49B601212D524400B612D3 /* BCMarketPair.m */,
-				9A49B603212D546300B612D3 /* BCMarketSymbolPair.h */,
-				9A49B604212D546300B612D3 /* BCMarketSymbolPair.m */,
-				9A49B606212D58C900B612D3 /* BCKLine.h */,
-				9A49B607212D58C900B612D3 /* BCKLine.m */,
-				9A49B609212D5D2C00B612D3 /* BCTrade.h */,
-				9A49B60A212D5D2C00B612D3 /* BCTrade.m */,
 				9A49B60C212D66AE00B612D3 /* BCDepth.h */,
 				9A49B60D212D66AE00B612D3 /* BCDepth.m */,
+				9A4E8D3D212FD2C60065FE04 /* RequestPairs */,
+				9A49B606212D58C900B612D3 /* BCKLine.h */,
+				9A49B607212D58C900B612D3 /* BCKLine.m */,
+				9A49B5EF212D42AA00B612D3 /* BCLocation.h */,
+				9A49B5F0212D42AA00B612D3 /* BCLocation.m */,
+				9A49B5F7212D485800B612D3 /* BCMarket.h */,
+				9A49B5F8212D485800B612D3 /* BCMarket.m */,
+				9A49B600212D524400B612D3 /* BCMarketPair.h */,
+				9A49B601212D524400B612D3 /* BCMarketPair.m */,
+				9A49B5F4212D472A00B612D3 /* BCModelHeader.h */,
+				9A49B5FA212D4A1300B612D3 /* BCSymbol.h */,
+				9A49B5FB212D4A1300B612D3 /* BCSymbol.m */,
 				9A50B144212E55790092B0B6 /* BCTicker.h */,
 				9A50B145212E55790092B0B6 /* BCTicker.m */,
 				9A50B147212E593E0092B0B6 /* BCTickerPage.h */,
 				9A50B148212E593E0092B0B6 /* BCTickerPage.m */,
-				9A50B14B212E9CC80092B0B6 /* BCIPRequestPair.h */,
-				9A50B14C212E9CC80092B0B6 /* BCIPRequestPair.m */,
+				9A49B609212D5D2C00B612D3 /* BCTrade.h */,
+				9A49B60A212D5D2C00B612D3 /* BCTrade.m */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		9A4E8D3D212FD2C60065FE04 /* RequestPairs */ = {
+			isa = PBXGroup;
+			children = (
+				9A50B14B212E9CC80092B0B6 /* BCIPRequestPair.h */,
+				9A50B14C212E9CC80092B0B6 /* BCIPRequestPair.m */,
+				9A49B603212D546300B612D3 /* BCMarketSymbolPair.h */,
+				9A49B604212D546300B612D3 /* BCMarketSymbolPair.m */,
+				9A4E8D38212FD19D0065FE04 /* BCNodeRequestPairs.h */,
+				9A4E8D39212FD19D0065FE04 /* BCNodeRequestPairs.m */,
+				9A50B14A212E9B910092B0B6 /* BCRequstPairs.h */,
+				9A4E8D3B212FD22A0065FE04 /* BCRequstPairs.m */,
+			);
+			path = RequestPairs;
 			sourceTree = "<group>";
 		};
 		9A50F92E212C41AE0073952C /* HTTP */ = {
@@ -415,6 +431,7 @@
 			files = (
 				9A49B608212D58C900B612D3 /* BCKLine.m in Sources */,
 				9A49B5FC212D4A1300B612D3 /* BCSymbol.m in Sources */,
+				9A4E8D3C212FD22A0065FE04 /* BCRequstPairs.m in Sources */,
 				9A50B14D212E9CC80092B0B6 /* BCIPRequestPair.m in Sources */,
 				9A49B605212D546400B612D3 /* BCMarketSymbolPair.m in Sources */,
 				9A03C715212B7E4500AA4F52 /* ViewController.m in Sources */,
@@ -430,6 +447,7 @@
 				9A50B146212E55790092B0B6 /* BCTicker.m in Sources */,
 				9A03C737212B834900AA4F52 /* BCApiManager.m in Sources */,
 				9A49B5F9212D485800B612D3 /* BCMarket.m in Sources */,
+				9A4E8D3A212FD19D0065FE04 /* BCNodeRequestPairs.m in Sources */,
 				9A49B60E212D66AE00B612D3 /* BCDepth.m in Sources */,
 				9A49B602212D524400B612D3 /* BCMarketPair.m in Sources */,
 			);

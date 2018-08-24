@@ -1,15 +1,14 @@
 //
-//  BCMarketSymbolPair.m
+//  BCRequstPairs.m
 //  blockcc
 //
-//  Created by fantasy on 2018/8/22.
+//  Created by fantasy on 2018/8/24.
 //  Copyright © 2018年 acekiller. All rights reserved.
 //
 
-#import "BCMarketSymbolPair.h"
-#import <MJExtension/MJExtension.h>
+#import "BCRequstPairs.h"
 
-@implementation BCMarketSymbolPair
+@implementation BCRequstPairs
 
 - (NSDictionary *) pairJson {
     return [self mj_keyValues];

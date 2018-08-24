@@ -32,7 +32,17 @@
 - (RACSignal *) getTrade:(BCMarketSymbolPair *)pairs;
 - (RACSignal *) getDepth:(BCMarketSymbolPair *)pairs;
 
+- (RACSignal *) getExchange_rate:(BCMarketSymbolPair *)pairs;
+- (RACSignal *) getExrate:(BCMarketSymbolPair *) pairs;
+
 - (RACSignal *) getTicker:(BCMarketSymbolPair *)pairs;
 - (RACSignal *) getTickers:(BCMarketSymbolPair *)pairs;
+- (RACSignal *) getPrice:(BCMarketSymbolPair *)pairs;
+- (RACSignal *) getPriceHistory:(BCMarketSymbolPair *)pairs;
+
+- (RACSignal *) getTxTxhash:(BCMarketSymbolPair *)pairs;
+- (RACSignal *) getAddress:(BCMarketSymbolPair *)pairs;
+
+- (RACSignal *) getNewPairs:(BCNodeRequestPairs *)pairs;
 
 @end
